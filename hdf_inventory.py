@@ -41,3 +41,4 @@ with h5py.File(r"Z:\OneDrive_1_11-9-2022\HydraulicsBuild_MB.p02.hdf",'r') as hf:
 g = folium.GeoJson(data=gdf).add_to(m)
 folium.GeoJsonTooltip(fields=["name"]).add_to(g)
 m.save(r'./out/hdf_XS_map.html')
+gdf.to_file('hdf_XS.shp')  
