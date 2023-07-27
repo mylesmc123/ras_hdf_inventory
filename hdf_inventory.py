@@ -5,7 +5,7 @@ import geopandas as gpd
 from shapely.geometry import Polygon, LineString, Point
 import folium
 
-with h5py.File(r"Z:\OneDrive_1_11-9-2022\HydraulicsBuild_MB.p02.hdf",'r') as hf:
+with h5py.File("HydraulicsBuild_MB.p02.hdf",'r') as hf:
     
     df = pd.DataFrame()
     df['XS_Name'] = hf['/Results/Unsteady/Geometry Info/Cross Section Only'][:]
